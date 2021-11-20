@@ -42,9 +42,9 @@ export const Select = (props: SelectProps) => {
                 <button
                     value=""
                     onClick={toggleDropdown}
-                    id="select-placeholder"
-                    className="select-button select-selected">
+                    className="select-button select-selected select-placeholder">
                     {props.placeholder ?? "placeholder"}
+                    <DownArrowIcon />
                 </button>
             )}
             {open && (
