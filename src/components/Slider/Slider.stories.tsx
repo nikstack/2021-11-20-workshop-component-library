@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Slider } from "./Slider";
+import { Slider, RangeSlider } from "./Slider";
 
 export default {
   title: "Components/Slider",
@@ -12,4 +12,11 @@ export default {
 const Template: ComponentStory<typeof Slider> = (args) => <Slider {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  range: false,
+};
+
+export const Range = Template.bind({});
+Range.args = {
+  range: true,
+};
