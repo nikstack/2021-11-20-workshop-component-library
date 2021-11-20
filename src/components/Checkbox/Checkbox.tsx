@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Checkbox.css";
-import { ReactComponent as CheckIcon } from './check.svg';
+import { ReactComponent as CheckIcon } from "./check.svg";
 
 interface CheckboxProps {
     name: string;
@@ -10,11 +10,10 @@ interface CheckboxProps {
     handleChanged: (isChecked: boolean) => void;
 }
 
-export const Checkbox = ({...props}: CheckboxProps) => {
-
+export const Checkbox = ({ ...props }: CheckboxProps) => {
     const [isChecked, setIsChecked] = useState(props.isInitialChecked);
 
-    function toggle(e) {
+    function toggle(e: any) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -24,14 +23,22 @@ export const Checkbox = ({...props}: CheckboxProps) => {
         props.handleChanged && props.handleChanged(toggledIsChecked);
     }
 
-    return <>
-        <div className={`Checkbox ${isChecked ? 'checked' : ''}`}>
-            <label onClick={toggle}>
-                <input type="checkbox" name={props.name} value={props.name} onChange={toggle}/>
-                <div className="box">{isChecked ? <CheckIcon/> : '\u00A0'}</div>
-                {' '}
-                {props.label}
-            </label>
-        </div>
-    </>;
+    return (
+        <>
+            <div className={`Checkbox ${isChecked ? "checked" : ""}`}>
+                <label onClick={toggle}>
+                    <input
+                        type="checkbox"
+                        name={props.name}
+                        value={props.name}
+                        onChange={toggle}
+                    />
+                    <div className="box">
+                        {isChecked ? <CheckIcon /> : "\u00A0"}
+                    </div>{" "}
+                    {props.label}
+                </label>
+            </div>
+        </>
+    );
 };
