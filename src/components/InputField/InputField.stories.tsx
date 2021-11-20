@@ -1,7 +1,7 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import {ComponentMeta, ComponentStory} from "@storybook/react";
 
-import { InputField } from "./InputField";
+import {FormatType, InputField} from "./InputField";
 
 export default {
     title: "Components/InputField",
@@ -18,3 +18,6 @@ Default.args = {};
 
 export const WithPlaceholderAndValue = Template.bind({});
 WithPlaceholderAndValue.args = { placeholder: 'Hello World', defaultValue: 'Default Value' }
+
+export const IBAN = Template.bind({});
+IBAN.args = { formatType: FormatType.IBAN, placeholder: 'DE12 3456 ...' }

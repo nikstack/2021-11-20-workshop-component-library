@@ -10,7 +10,7 @@ interface InputFieldProps extends HTMLInputElement {
     formatType?: FormatType,
 }
 
-export const InputField = ({ formatType, defaultValue, placeholder }: InputFieldProps) => {
+export const InputField = ({ formatType, defaultValue = '', placeholder }: InputFieldProps) => {
     // --- YOUR CODE HERE ---
 
     const [value, setValue] = useState<string>(defaultValue);
@@ -40,7 +40,7 @@ export const InputField = ({ formatType, defaultValue, placeholder }: InputField
     }
 
     return <input placeholder={placeholder}
-                  defaultValue={defaultValue}
+                  value={value}
                   onChange={e => {
                       format(e.target.value)
                   }}
@@ -49,7 +49,14 @@ export const InputField = ({ formatType, defaultValue, placeholder }: InputField
 
 abstract class Formatter {
     getFormattedValue(value: string): string {
-        return ''
+
+      const matches = value.replaceAll(' ','').match(this.regex);
+
+        console.log(matches);
+      if (!matches) {
+          return value;
+      }
+      return matches.slice(1).filter(value => !!value).join(' ');
     }
 
     constructor(private regex: RegExp) {
@@ -59,7 +66,7 @@ abstract class Formatter {
 
 class IBANFormatter extends Formatter {
     constructor() {
-        super(/\w\w\d\d/);
+        super(/^(\w\w\d\d) ?(\d{1,4})? ?(\d{1,4})? ?(\d{1,4})? ?(\d{1,4})? ?(\d{1,2})?$/);
     }
 }
 
