@@ -1,3 +1,23 @@
-.InputField {
-  /* --- YOUR STYLES HERE --- */
+input {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 4px;
+    border: 1px solid #ECEFF1;
+
+    background-color: #ECEFF1;
+    color: #263238;
+
+    outline: none;
+    box-shadow: none;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #AABEC5;
+    opacity: 1; /* Firefox */
+}
+
+input:focus {
+    border-color: #D81B5D;
 }

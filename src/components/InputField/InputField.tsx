@@ -6,5 +6,5 @@ interface InputFieldProps {}
 export const InputField = ({ ...props }: InputFieldProps) => {
   // --- YOUR CODE HERE ---
 
-  return <>InputField</>;
+  return <input placeholder='Hello World' />;
 };
