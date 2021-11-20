@@ -1,3 +1,41 @@
-.Select {
-  /* --- YOUR STYLES HERE --- */
+#select-dropdown {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+.select-button {
+    width: 189px;
+    /* background/background-input */
+    background: #eceff1;
+    border-radius: 4px;
+}
+
+#select-label {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 170%;
+    /* or 27px */
+    display: flex;
+    align-items: center;
+
+    /* text/text-light */
+    color: #465d67;
+}
+
+.Select > option {
+    /* background/background-regular */
+    background: #ffffff;
+    /* border/light */
+    border: 1px solid #cfd8dc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#select-placeholer {
+    /* text/text-placeholder */
+    color: #aabec5;
+    background-color: red;
 }
