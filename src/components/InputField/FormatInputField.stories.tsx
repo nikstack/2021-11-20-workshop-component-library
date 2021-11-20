@@ -1,16 +1,16 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 
-import {FormatType, InputField} from "./InputField";
+import {FormatType, FormatInputField} from "./FormatInputField";
 
 export default {
     title: "Components/InputField",
-    component: InputField,
+    component: FormatInputField,
     argTypes: {},
-} as ComponentMeta<typeof InputField>;
+} as ComponentMeta<typeof FormatInputField>;
 
-const Template: ComponentStory<typeof InputField> = (args) => (
-    <InputField {...args} />
+const Template: ComponentStory<typeof FormatInputField> = (args) => (
+    <FormatInputField {...args} />
 );
 
 export const Default = Template.bind({});

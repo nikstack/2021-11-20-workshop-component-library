@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./InputField.css";
+import "./FormatInputField.css";
 
 export enum FormatType {
     TELEPHONE = 'TELEPHONE',
@@ -10,7 +10,7 @@ interface InputFieldProps extends HTMLInputElement {
     formatType?: FormatType,
 }
 
-export const InputField = ({ formatType, defaultValue = '', placeholder }: InputFieldProps) => {
+export const FormatInputField = ({ formatType, defaultValue = '', placeholder }: InputFieldProps) => {
     // --- YOUR CODE HERE ---
 
     const [value, setValue] = useState<string>(defaultValue);
@@ -33,6 +33,7 @@ export const InputField = ({ formatType, defaultValue = '', placeholder }: Input
 
     const format = (value: string) => {
         if (!formatter) {
+            setValue(value)
             return;
         }
 
@@ -50,13 +51,13 @@ export const InputField = ({ formatType, defaultValue = '', placeholder }: Input
 abstract class Formatter {
     getFormattedValue(value: string): string {
 
-      const matches = value.replaceAll(' ','').match(this.regex);
+        const matches = value.replaceAll(' ', '').match(this.regex);
 
         console.log(matches);
-      if (!matches) {
-          return value;
-      }
-      return matches.slice(1).filter(value => !!value).join(' ');
+        if (!matches) {
+            return value;
+        }
+        return matches.slice(1).filter(value => !!value).join(' ');
     }
 
     constructor(private regex: RegExp) {
