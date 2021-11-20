@@ -1,7 +1,6 @@
 .InputField {
   display: flex;
   flex-direction: column;
-  font-family: Nunito;
   font-style: normal;
   font-weight: normal;
 }
@@ -17,9 +16,9 @@
   left: 0px;
   top: 0px;
 
-  
   border-radius: 4px;
   display: flex;
+  margin: 8px 0px;
 }
 
 .ValidationBox--true {
