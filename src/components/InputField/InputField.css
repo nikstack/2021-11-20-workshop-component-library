@@ -1,3 +1,47 @@
 .InputField {
-  /* --- YOUR STYLES HERE --- */
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.InputLabel {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.InputBox {
+  height: 40px;
+  width: 376px;
+  left: 0px;
+  top: 0px;
+
+  border-radius: 4px;
+  display: flex;
+  margin: 8px 0px;
+}
+
+.ValidationBox--true {
+  background: #ECEFF1;
+}
+
+.ValidationBox--false {
+  background: #FCE8EF;
+} 
+
+.Input {
+  margin: 0 16px 0 16px;
+  width: inherit;
+  background: none;
+  border: none;
+}
+
+
+.Validation--true {
+  display: none;
+}
+
+.Validation--false {
+  color: #E62222;
+  font-size: 14px;
 }

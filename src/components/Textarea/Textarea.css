@@ -1,3 +1,67 @@
 .Toggle {
   /* --- YOUR STYLES HERE --- */
 }
+
+.text-area-wrapper {}
+
+.text-area-label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: #465D67;
+
+  margin-bottom: 8px;
+}
+
+.text-area-text {
+  background: #ECEFF1;
+  border-radius: 4px;
+
+  height: 120px;
+  width: 560px;
+  left: 0px;
+  top: 0px;
+  border-radius: 4px;
+
+  padding-top: 9px;
+  padding-left: 16px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  border: none;
+  outline: none;
+
+  position: relative;
+
+  resize: none;
+
+  margin-bottom: 8px;
+}
+
+.text-area-text--error {
+  background: #FCE8EF;
+  margin-bottom: 0px;
+}
+
+.text-area-validation-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+
+  color: #D81B5D;
+}

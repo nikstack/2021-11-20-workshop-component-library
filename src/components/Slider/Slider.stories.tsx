@@ -4,12 +4,19 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Slider } from "./Slider";
 
 export default {
-  title: "Components/Slider",
-  component: Slider,
-  argTypes: {},
+    title: "Components/Slider",
+    component: Slider,
+    argTypes: {},
 } as ComponentMeta<typeof Slider>;
 
 const Template: ComponentStory<typeof Slider> = (args) => <Slider {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+    range: false,
+};
+
+export const Range = Template.bind({});
+Range.args = {
+    range: true,
+};
